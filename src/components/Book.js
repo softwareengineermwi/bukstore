@@ -1,0 +1,49 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Book = ({ title, author }) => (
+  <div className="grid margin-bottom-md">
+    <div className="col-6">
+      <span>Action</span>
+      <h3>{title}</h3>
+      <cite>{author}</cite>
+      <ul className="list flex gap-md">
+        <li><button>Comment</button></li>
+        <li><button>Remove</button></li>
+        <li><button>Edit</button></li>
+      </ul>
+    </div>
+
+    <div className="col-3 flex items-center">
+      <div className="position-relative">
+        <svg height="100" width="100">
+          <circle className="tr" cx="50" cy="50" r="40" stroke="#428bca" fill="#fff" />
+        </svg>
+      </div>
+      <div>
+        <span className="text-xl">64%</span>
+        <div>
+          <span>Completed</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="col-3">
+      <span>CURRENT CHAPTER</span>
+      <span>Chapter 0</span>
+      <button>UPDATE PROGRESS</button>
+    </div>
+  </div>
+)
+
+Book.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+};
+
+Book.defaultProps = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+};
+
+export default Book

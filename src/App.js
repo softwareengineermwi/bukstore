@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 import './App.css';
 
-import Books from './components/Books';
+import BookList from './components/BookList';
 import Categories from './components/Categories';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
           </div>
 
           <div className="f-header__nav" role="navigation">
-            <nav className="f-header__nav-grid container max-width-sm">
+            <nav className="f-header__nav-grid container max-width-md">
               <div className="f-header__nav-logo-wrapper margin-right-lg@md">
                 <a href="#0" className="f-header__logo">
                   <h6>Bookstore CMS</h6>
@@ -55,7 +55,7 @@ function App() {
             <Categories />
           </Route>
           <Route path="/">
-            <Books />
+            <BookList />
           </Route>
         </Switch>
       </div>
