@@ -2,12 +2,27 @@ import React from 'react';
 import Book from './Book'
 import CreateNewBook from './CreateNewBook ';
 
+const dummyArr = [
+  {
+    title: 'Hoom Hoom',
+    author: 'Auth1',
+  },
+  {
+    title: 'Zing Zing',
+    author: 'Auth2',
+  },
+  {
+    title: 'Bazingzing',
+    author: 'Auth3',
+  },
+]
+
 const BookList = () => (
   <div className="container max-width-md">
-    <Book title="Hoom Hoom" author="Blah 2"></Book>
-    <Book title="Zing Zing" author="Blah 2"></Book>
-    <Book title="Bazingazing" author="Blah 2"></Book>
-    <CreateNewBook></CreateNewBook>
+    {
+      dummyArr.map(({ title, author }) => (<Book key={title + author} title={title} author={author} />))
+    }
+    <CreateNewBook />
   </div>
 );
 
