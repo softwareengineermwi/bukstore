@@ -1,7 +1,6 @@
-import React from 'react'
-
 const booksReducer = (prevState, action) => {
-
+  prevState
+  action
 }
 
-export default booksReducer
+export default booksReducer;
