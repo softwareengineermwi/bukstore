@@ -1,8 +1,8 @@
 @import url('https://cdn-ec853.web.app/css/style.css');
+
 svg {
   transform: rotate(-90deg);
   stroke-dasharray: 251;
-  /* (2PI * 40px) */
   stroke-dashoffset: 251;
   animation: offsettozero 0.2s linear forwards;
 }
