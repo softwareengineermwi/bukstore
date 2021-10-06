@@ -13,7 +13,6 @@ const Book = ({ title, author }) => (
         <li><button>Edit</button></li>
       </ul>
     </div>
-
     <div className="col-3 flex items-center">
       <div className="position-relative">
         <svg height="100" width="100">
@@ -27,7 +26,6 @@ const Book = ({ title, author }) => (
         </div>
       </div>
     </div>
-
     <div className="col-3">
       <span>CURRENT CHAPTER</span>
       <span>Chapter 0</span>
