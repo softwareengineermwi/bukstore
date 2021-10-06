@@ -4,9 +4,11 @@ import {
   BrowserRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
 import './App.css';
+import store from './configureStore';
 
 import BookList from './components/BookList';
 import Categories from './components/Categories';
+import { Provider } from 'react-redux';
 
 function App() {
   return (
@@ -55,7 +57,7 @@ function App() {
             <Categories />
           </Route>
           <Route path="/">
-            <BookList />
+            <Provider store={store}><BookList /></Provider>
           </Route>
         </Switch>
       </div>

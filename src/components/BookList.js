@@ -1,29 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book'
 import CreateNewBook from './CreateNewBook ';
 
-const dummyArr = [
-  {
-    title: 'Hoom Hoom',
-    author: 'Auth1',
-  },
-  {
-    title: 'Zing Zing',
-    author: 'Auth2',
-  },
-  {
-    title: 'Bazingzing',
-    author: 'Auth3',
-  },
-]
-
-const BookList = () => (
-  <div className="container max-width-md">
-    {
-      dummyArr.map(({ title, author }) => (<Book key={title + author} title={title} author={author} />))
-    }
-    <CreateNewBook />
-  </div>
-);
+const BookList = () => {
+  const books = useSelector((state) => state.booksReducer)
+  const bookList = books.map(({ title, author, id }) => <Book key={id} id={id} title={title} author={author} />)
+  return (
+    <div className="container max-width-md">
+      {bookList}
+      <CreateNewBook />
+    </div>
+  )
+}
 
 export default BookList;
