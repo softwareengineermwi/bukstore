@@ -1,20 +1,4 @@
-const initState = [
-  {
-    title: 'Hoom Hoom',
-    author: 'Auth1',
-    id: '1'
-  },
-  {
-    title: 'Zing Zing',
-    author: 'Auth2',
-    id: '2'
-  },
-  {
-    title: 'Bazingzing',
-    author: 'Auth3',
-    id: '3'
-  },
-]
+const initState = []
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
