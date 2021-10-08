@@ -1,16 +1,22 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router, Switch, Route, Link,
 } from 'react-router-dom';
 import './App.css';
-import store from './configureStore';
 
 import BookList from './components/BookList';
 import Categories from './components/Categories';
-import { Provider } from 'react-redux';
+import { getBooks } from './redux/books/books';
+import { useDispatch } from 'react-redux';
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(async () => {
+    dispatch(await getBooks())
+  }, [])
+
   return (
     <Router>
       <div className="App container">
@@ -57,7 +63,7 @@ function App() {
             <Categories />
           </Route>
           <Route path="/">
-            <Provider store={store}><BookList /></Provider>
+            <BookList />
           </Route>
         </Switch>
       </div>
