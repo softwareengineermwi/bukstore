@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
-import { toStore } from '../redux/books/books';
+import { addBook } from '../redux/books/books';
 import { g_v2 } from './utils'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -14,7 +14,7 @@ const CreateNewBook = () => {
       category: 'Mwila',
     }
 
-    dispatch(await toStore(newBook))
+    dispatch(await addBook(newBook))
   }
 
   return (
