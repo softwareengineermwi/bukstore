@@ -5,8 +5,8 @@ import CreateNewBook from './CreateNewBook ';
 
 const BookList = () => {
   const books = useSelector((state) => state.booksReducer)
-  const bookList = books.map(({ title, author, id }) => <Book key={id} id={id} title={title} author={author} />)
-  console.log(books);
+
+  const bookList = books.map((book) => <Book key={book.item_id} id={book.item_id} title={book.title} author="MwiMwi" />)
 
   return (
     <div className="container max-width-md">

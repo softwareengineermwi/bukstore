@@ -5,9 +5,9 @@ import { useDispatch } from 'react-redux';
 
 const Book = ({ title, author, id, }) => {
   const dispatch = useDispatch()
-  
-  const removeHandler = (e) => {
-    dispatch(removeBook(e.target.id))
+
+  const removeHandler = async (e) => {
+    dispatch(await removeBook(e.target.id))
   }
 
   return (

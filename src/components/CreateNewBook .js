@@ -1,20 +1,20 @@
 import React from 'react';
 import { useDispatch } from 'react-redux'
-import { addBook } from '../redux/books/books';
+import { toStore } from '../redux/books/books';
 import { g_v2 } from './utils'
 import { v4 as uuidv4 } from 'uuid'
 
 const CreateNewBook = () => {
   const dispatch = useDispatch()
 
-  const submitBookToStore = () => {
+  const submitBookToStore = async () => {
     const newBook = {
-      id: uuidv4(),
+      item_id: uuidv4(),
       title: g_v2('_title').value,
-      author: 'Mwila',
+      category: 'Mwila',
     }
 
-    dispatch(addBook(newBook))
+    dispatch(await toStore(newBook))
   }
 
   return (

@@ -15,7 +15,7 @@ function App() {
 
   useEffect(async () => {
     dispatch(await getBooks())
-  }, [])
+  })
 
   return (
     <Router>
