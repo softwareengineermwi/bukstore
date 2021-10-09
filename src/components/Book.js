@@ -11,36 +11,44 @@ const Book = ({ title, author, id, }) => {
   }
 
   return (
-    <div className="grid margin-bottom-md">
-      <div className="col-6">
-        <span>Action</span>
+    <div className="grid items-center margin-bottom-md shadow-xs bg padding-sm">
+      <div className="col-5">
+        <span className="text-sm">Action</span>
         <h3>{title}</h3>
-        <cite>{author}</cite>
-        <ul className="list flex gap-md">
-          <li><button id={id}>Comment</button></li>
-          <li><button id={id} onClick={removeHandler}>Remove</button></li>
-          <li><button id={id}>Edit</button></li>
+        <cite className="text-sm">{author}</cite>
+        <ul className="list flex gap-sm padding-top-sm">
+          <li><button className="btn btn--sm btn-custom" id={id}>Comment</button></li>
+          <li>|</li>
+          <li><button className="btn btn--sm btn-custom" id={id} onClick={removeHandler}>Remove</button></li>
+          <li>|</li>
+          <li><button className="btn btn--sm btn-custom" id={id}>Edit</button></li>
         </ul>
       </div>
 
-      <div className="col-3 flex items-center">
-        <div className="position-relative">
-          <svg height="100" width="100">
-            <circle className="tr" cx="50" cy="50" r="40" stroke="#428bca" fill="#fff" />
-          </svg>
-        </div>
-        <div>
-          <span className="text-xl">64%</span>
-          <div>
-            <span>Completed</span>
+      <div className="col-4 flex">
+        <div className=" flex items-center">
+          <div className="position-relative">
+            <svg height="100" width="100">
+              <circle className="tr" cx="50" cy="50" r="40" stroke="#428bca" fill="#fff" />
+            </svg>
           </div>
+          <div>
+            <span className="text-xl">64%</span>
+            <div>
+              <span>Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="heigh-100% position-relative">
+          <div className="mark padding-left-lg"></div>
         </div>
       </div>
 
       <div className="col-3">
-        <span>CURRENT CHAPTER</span>
-        <span>Chapter 0</span>
-        <button>UPDATE PROGRESS</button>
+        <span className="text-sm block">CURRENT CHAPTER</span>
+        <span className="text-sm block">Chapter 0</span>
+        <button className="btn btn--sm margin-top-sm">UPDATE PROGRESS</button>
       </div>
     </div>
   )

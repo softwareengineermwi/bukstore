@@ -19,18 +19,18 @@ const CreateNewBook = () => {
 
   return (
     <div className="border-top">
-      <h3>ADD NEW BOOK</h3>
-      <div className="grid gap-sm">
+      <h4 className="padding-y-xs">ADD NEW BOOK</h4>
+      <div className="grid gap-sm items-center">
         <div className="col-6">
-          <input type="text" className="width-100%" placeholder="Book title" id="_title"></input>
+          <input type="text" className="width-100% form-control" placeholder="Book title" id="_title"></input>
         </div>
         <div className="col-4">
-          <select name="" id="_category" className="width-100%">
+          <select name="" id="_category" className="width-100% form-control">
             <option value="">CATEGORY</option>
           </select>
         </div>
         <div className="col-2">
-          <button className="width-100%" onClick={submitBookToStore}>ADD BOOK</button>
+          <button className="width-100% flex btn" onClick={submitBookToStore}>ADD BOOK</button>
         </div>
       </div>
     </div>

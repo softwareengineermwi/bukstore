@@ -1,4 +1,13 @@
 @import url('https://cdn-ec853.web.app/css/style.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+body {
+  background-color: #fafafa;
+  font-family: 'Roboto Slab', serif;
+}
+
+h3, h4 {
+  font-family: 'Roboto Slab', serif;
+}
 
 svg {
   transform: rotate(-90deg);
@@ -15,4 +24,41 @@ svg {
 
 .tr {
   stroke-width: 6px;
+}
+
+.btn {
+  border-radius: 8px;
+  background-color: #0290ff;
+  color: #fff;
+}
+
+.btn-custom {
+  background: none;
+  border: none;
+  color: #0290ff;
+  padding: 0;
+}
+
+.form-control {
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+cite {
+  color: #0290ff;
+}
+
+a {
+  color: #0290ff;
+  text-decoration: none;
+}
+
+.mark {
+  height: 75px;
+  border-right: 2px solid rgb(197, 197, 197);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
